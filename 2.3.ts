@@ -30,9 +30,14 @@
     // generic tuple
     type genericTuple<X, Y> = [X, Y];
 
+    type user = {
+        name: string,
+        email: string
+    }
+
     const person: genericTuple<string, string> = ["Mr.x", "Ms.x"];
 
-    const userWithId: genericTuple<number, { name: string; email: string }> = [
+    const userWithId: genericTuple<number, user> = [
         121,
         { name: "Tom", email: "tom@jerry.com" },
     ];
